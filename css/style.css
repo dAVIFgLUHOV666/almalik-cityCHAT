@@ -1,0 +1,440 @@
+:root {
+    --text-color: #333b3c;
+    --background-color: #efedea;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#chat-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ae00ff;
+    padding: 10px;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+form {
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: calc(100% - 100px);
+    height: 40px;
+    background-color: #353535;
+    color: #000;
+    padding: 10px;
+    border: 1px solid #353535;
+    border-radius: 20px;
+    resize: none;
+}
+
+button {
+    background-color: #ccc;
+    color: #000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #b30000;
+}
+
+img {
+    cursor: pointer;
+    transition: transform 0.2s;
+    max-width: 100%;
+    height: auto;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+img:active {
+    transform: scale(1.5);
+}
+
+@media (max-width: 600px) {
+    #chat-box {
+        max-height: 300px;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+
+h1 {
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #3b3a3afd;
+    border-radius: 4px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.dark-mode {
+    --text-color: #efefec;
+    --background-color: #000000;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.arrow-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.arrow-button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.other {
+    justify-content: flex-start;
+}
+
+.message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message span {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 70%;
+    display: inline-block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url("http://codingstella.com/wp-content/uploads/2024/01/download-8-scaled.jpeg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    max-width: 90%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.form-value {
+    width: 100%;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 100%;
+    border-bottom: 2px solid #ae00ff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #ae00ff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+input:focus ~ label {
+    top: -5px;
+}
+input:valid ~ label {
+    top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+    transition: border-color 0.3s;
+}
+
+.inputbox input:focus {
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 15px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.forget label:nth-child(2) {
+    order: 1;
+}
+
+.forget label {
+    display: flex;
+    align-items: center;
+}
+
+.forget label input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.forget label a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.forget label a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+.register {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+.chat-box {
+    background-color: #1a1a1a;
+    color: #ff0000;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chat-box .username {
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00;
+}
+
+.chat-box .message {
+    margin-bottom: 5px;
+}
+
+.chat-box .timestamp {
+    color: #fa0000;
+    font-size: 0.8em;
+}
+
+.chat-box .message span {
+    color: #fff;
+}
+
+.color-a {
+    color: #ff0000; /* Красный для 'A' */
+}
+
+.color-b {
+    color: #00ff00; /* Зеленый для 'B' */
+}
+
+.color-c {
+    color: #0000ff; /* Синий для 'C' */
+}
+
+.color-d {
+    color: #ffff00; /* Желтый для 'D' */
+}
+
+.color-e {
+    color: #ff00ff; /* Фиолетовый для 'E' */
+}
+
+/* Добавьте больше стилей для других букв */
+.default-color {
+    color: #fff; /* Цвет по умолчанию */
+} 
